@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "d62f7308-3756-4080-855c-4a01d01ebcb7",
+		"name": "Mace Innovations - ICE Lamda SDK to API Lamda Starter Templates",
+		"description": "Collection to Jumpstart ICE Lambda SDK to API Lambda Development",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2039834",
+		"_collection_link": "https://maceinnovations.postman.co/workspace/%2522Mace-Innovations---ICE-Lamda-S~e4888a51-91bb-4182-be23-9eb7252901b1/collection/2039834-d62f7308-3756-4080-855c-4a01d01ebcb7?action=share&source=collection_link&creator=2039834"
+	},
+	"item": [
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{apiUrl}}/ice",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"ice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ClientId\": \"{{client_id}}\",\n  \"Secret\": \"{{client_secret}}\"\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/ice/authenticate",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"ice",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Loan Field Values",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Guid\": \"{{{guid}}}\",\n  \"LoanFields\": [\"{{loan_field_firstname}}\", \"{{loan_field_lastname}}\"]\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/ice/loan-field-reader",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"ice",
+						"loan-field-reader"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "client_id",
+			"value": "your-client-id"
+		},
+		{
+			"key": "client_secret",
+			"value": "your-secret"
+		},
+		{
+			"key": "instance_id",
+			"value": "be11144930"
+		},
+		{
+			"key": "guid",
+			"value": "10091151-92d9-49c5-84df-02eb265b817c"
+		},
+		{
+			"key": "loan_field_firstname",
+			"value": "4000"
+		},
+		{
+			"key": "loan_field_lastname",
+			"value": "4001"
+		}
+	]
+}

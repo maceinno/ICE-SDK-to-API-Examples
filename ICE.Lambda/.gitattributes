@@ -1,0 +1,4 @@
+* text=auto
+*.sh text eol=lf
+*.dockerignore text eol=lf
+bootstrap text eol=lf
