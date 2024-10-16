@@ -8,11 +8,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D67CED2-B73E-4564-8213-66BC64F1D7A3}"
 	ProjectSection(SolutionItems) = preProject
 		build.ps1 = build.ps1
+		ICE.Lambda.postman_collection-local.json = ICE.Lambda.postman_collection-local.json
 		ICE.Lambda.postman_collection.json = ICE.Lambda.postman_collection.json
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS_Lamda_Example_Api", "AWS_Lamda_Example_Api\src\AWS_Lamda_Example_Api\AWS_Lamda_Example_Api.csproj", "{364661AF-2AF4-493A-9362-476B5D2A32C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWS_Lamda_Example_Api", "AWS_Lamda_Example_Api\src\AWS_Lamda_Example_Api\AWS_Lamda_Example_Api.csproj", "{364661AF-2AF4-493A-9362-476B5D2A32C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
