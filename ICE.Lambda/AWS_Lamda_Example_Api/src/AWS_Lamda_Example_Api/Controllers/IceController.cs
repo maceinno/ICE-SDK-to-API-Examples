@@ -125,9 +125,6 @@ namespace AWS_Lamda_Example_Api.Controllers
 
          if (authResponse is { Success: true, Token: string token })
          {
-
-            //try to obtain an exclusive lock on the loan
-            //if the lock is obtained, write the loan fields
             var lockRequest = new ResourceLockRequest
             {
                Resource = new Resource
@@ -159,11 +156,10 @@ namespace AWS_Lamda_Example_Api.Controllers
                      return new JsonResult(lockResponse);
                   }
                }
-
-
             }
 
             var loanFieldsResponse = await WriteLoanFieldDataAsync(token, writerRequest);
+            await UnlockResourceExclusiveLoanLock(token, lockResponse.LockId, lockRequest.Resource.EntityId);
             stopwatch.Stop(); // Stop the stopwatch
             var elapsedMilliseconds = stopwatch.ElapsedMilliseconds; // Get the elapsed time in milliseconds
             var elapsedSeconds = Math.Round(stopwatch.Elapsed.TotalSeconds, 2); // Get the elapsed time in seconds, rounded to the hundredths place
@@ -187,8 +183,6 @@ namespace AWS_Lamda_Example_Api.Controllers
             elapsedSeconds = elapsedSecondsOnFailure
          });
       }
-
-      //Private Methods
       private async Task<AuthenticationResponse> PerformAuthenticationAsync(AuthenticationRequest request)
       {
          using (var client = new HttpClient())
