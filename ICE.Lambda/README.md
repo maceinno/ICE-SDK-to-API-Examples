@@ -1,5 +1,13 @@
-# ICE-SDK-to-API-Examples
+# AWS Lambda Example API
 
-## Getting Started
+This project demonstrates how to create an ASP.NET Core Web API running on AWS Lambda, exposed through Amazon API Gateway.
 
--   [Review Documentation](AWS_Lamda_Example_Api/src/AWS_Lamda_Example_Api/Readme.md)
+## Table of Contents
+
+- [Requirements](requirements.md)
+- [Project Structure](project-structure.md)
+- [Endpoints](endpoints.md)
+- [Running the Project](running-the-project.md)
+- [Testing the API](testing-the-api.md)
+- [Deploying to AWS Lambda](deploying-to-aws-lambda.md)
+- [ASP.NET Core Web API Serverless Application Reference Docs](aspnet-core-web-api-serverless-application.md)
