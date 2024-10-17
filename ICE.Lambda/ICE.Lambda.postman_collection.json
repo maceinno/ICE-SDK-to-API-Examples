@@ -1,109 +1,326 @@
 {
-	"info": {
-		"_postman_id": "d62f7308-3756-4080-855c-4a01d01ebcb7",
-		"name": "Mace Innovations - ICE Lamda SDK to API Lamda Starter Templates",
-		"description": "Collection to Jumpstart ICE Lambda SDK to API Lambda Development",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "2039834",
-		"_collection_link": "https://maceinnovations.postman.co/workspace/%2522Mace-Innovations---ICE-Lamda-S~e4888a51-91bb-4182-be23-9eb7252901b1/collection/2039834-d62f7308-3756-4080-855c-4a01d01ebcb7?action=share&source=collection_link&creator=2039834"
-	},
-	"item": [
-		{
-			"name": "Get",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{apiUrl}}/ice",
-					"host": [
-						"{{apiUrl}}"
-					],
-					"path": [
-						"ice"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Authenticate",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"ClientId\": \"{{client_id}}\",\n  \"Secret\": \"{{client_secret}}\"\n}"
-				},
-				"url": {
-					"raw": "{{apiUrl}}/ice/authenticate",
-					"host": [
-						"{{apiUrl}}"
-					],
-					"path": [
-						"ice",
-						"authenticate"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Loan Field Values",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"Guid\": \"{{{guid}}}\",\n  \"LoanFields\": [\"{{loan_field_firstname}}\", \"{{loan_field_lastname}}\"]\n}"
-				},
-				"url": {
-					"raw": "{{apiUrl}}/ice/loan-field-reader",
-					"host": [
-						"{{apiUrl}}"
-					],
-					"path": [
-						"ice",
-						"loan-field-reader"
-					]
-				}
-			},
-			"response": []
-		}
-	],
-	"variable": [
-		{
-			"key": "client_id",
-			"value": "your-client-id"
-		},
-		{
-			"key": "client_secret",
-			"value": "your-secret"
-		},
-		{
-			"key": "instance_id",
-			"value": "be11144930"
-		},
-		{
-			"key": "guid",
-			"value": "10091151-92d9-49c5-84df-02eb265b817c"
-		},
-		{
-			"key": "loan_field_firstname",
-			"value": "4000"
-		},
-		{
-			"key": "loan_field_lastname",
-			"value": "4001"
-		}
-	]
+  "info": {
+    "_postman_id": "d62f7308-3756-4080-855c-4a01d01ebcb7",
+    "name": "Mace Innovations - ICE Lamda SDK to API - Lamda Example API",
+    "description": "Collection to Jumpstart ICE Lambda SDK to API Lambda Development",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "2039834",
+    "_collection_link": ""
+  },
+  "item": [
+    {
+      "name": "Get",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{apiUrl}}/ice",
+          "host": [
+            "{{apiUrl}}"
+          ],
+          "path": [
+            "ice"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiUrl}}/ice",
+              "host": [
+                "{{apiUrl}}"
+              ],
+              "path": [
+                "ice"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 17 Oct 2024 02:41:43 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"Success!\",\n    \"message\": \"Your new function is now running on AWS Lamda. Now lets do some work!\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Authenticate",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ClientId\": \"{{client_id}}\",\n  \"Secret\": \"{{client_secret}}\"\n}"
+        },
+        "url": {
+          "raw": "{{apiUrl}}/ice/authenticate",
+          "host": [
+            "{{apiUrl}}"
+          ],
+          "path": [
+            "ice",
+            "authenticate"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Authenticate Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ClientId\": \"{{client_id}}\",\n  \"Secret\": \"{{client_secret}}\"\n}"
+            },
+            "url": {
+              "raw": "{{apiUrl}}/ice/authenticate",
+              "host": [
+                "{{apiUrl}}"
+              ],
+              "path": [
+                "ice",
+                "authenticate"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 17 Oct 2024 02:41:01 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Auth Success!\",\n    \"token\": \"000000000000000\",\n    \"response\": null\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Loan Field Values",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"Guid\": \"{{{guid}}}\",\n  \"LoanFields\": [\"{{loan_field_firstname}}\", \"{{loan_field_lastname}}\"]\n}"
+        },
+        "url": {
+          "raw": "{{apiUrl}}/ice/loan-field-reader",
+          "host": [
+            "{{apiUrl}}"
+          ],
+          "path": [
+            "ice",
+            "loan-field-reader"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Loan Field Values Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"Guid\": \"{{{guid}}}\",\n  \"LoanFields\": [\"{{loan_field_firstname}}\", \"{{loan_field_lastname}}\"]\n}"
+            },
+            "url": {
+              "raw": "{{apiUrl}}/ice/loan-field-reader",
+              "host": [
+                "{{apiUrl}}"
+              ],
+              "path": [
+                "ice",
+                "loan-field-reader"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 17 Oct 2024 01:50:41 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"loanFieldsResponse\": {\n        \"success\": true,\n        \"message\": \"Loan Fields Retrieved Successfully!\",\n        \"loanFields\": {\n            \"4000\": \"Chris\",\n            \"4001\": \"Mace\"\n        },\n        \"headers\": {\n            \"X-Concurrency-Limit-Limit\": \"30\",\n            \"X-Concurrency-Limit-Remaining\": \"30\",\n            \"X-Rate-Limit-Limit\": \"500000\",\n            \"X-Rate-Limit-Remaining\": \"500000\",\n            \"X-Rate-Limit-Reset\": \"1729209600\"\n        },\n        \"retryCount\": 0\n    },\n    \"elapsedMilliseconds\": 547,\n    \"elapsedSeconds\": 0.55\n}"
+        }
+      ]
+    },
+    {
+      "name": "Write Loan Field Values",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"Guid\": \"{{{guid}}}\",\n    \"LoanFieldsToUpdate\": [\n        {\n            \"Id\": \"{{loan_field_firstname}}\",\n            \"value\": \"Chris\",\n            \"lock\": false\n        },\n        {\n            \"Id\": \"{{loan_field_lastname}}\",\n            \"value\": \"Mace\",\n            \"lock\": false\n        }\n    ]\n}"
+        },
+        "url": {
+          "raw": "{{apiUrl}}/ice/loan-field-writer",
+          "host": [
+            "{{apiUrl}}"
+          ],
+          "path": [
+            "ice",
+            "loan-field-writer"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Loan Field Values Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Guid\": \"{{{guid}}}\",\n    \"LoanFieldsToUpdate\": [\n        {\n            \"Id\": \"{{loan_field_firstname}}\",\n            \"value\": \"Chris\",\n            \"lock\": false\n        },\n        {\n            \"Id\": \"{{loan_field_lastname}}\",\n            \"value\": \"Mace\",\n            \"lock\": false\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{apiUrl}}/ice/loan-field-writer",
+              "host": [
+                "{{apiUrl}}"
+              ],
+              "path": [
+                "ice",
+                "loan-field-writer"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 17 Oct 2024 01:50:24 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Kestrel"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"loanFieldsResponse\": {\n        \"success\": true,\n        \"message\": \"Loan Fields Written Successfully!\",\n        \"loanFields\": {},\n        \"headers\": {\n            \"X-Concurrency-Limit-Limit\": \"30\",\n            \"X-Concurrency-Limit-Remaining\": \"30\",\n            \"X-Rate-Limit-Limit\": \"500000\",\n            \"X-Rate-Limit-Remaining\": \"500000\",\n            \"X-Rate-Limit-Reset\": \"1729209600\"\n        },\n        \"retryCount\": 0\n    },\n    \"elapsedMilliseconds\": 39882,\n    \"elapsedSeconds\": 39.88\n}"
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "client_id",
+      "value": "your-client-id"
+    },
+    {
+      "key": "client_secret",
+      "value": "your-secret"
+    },
+    {
+      "key": "instance_id",
+      "value": "be11144930"
+    },
+    {
+      "key": "guid",
+      "value": "10091151-92d9-49c5-84df-02eb265b817c"
+    },
+    {
+      "key": "loan_field_firstname",
+      "value": "4000"
+    },
+    {
+      "key": "loan_field_lastname",
+      "value": "4001"
+    }
+  ]
 }
