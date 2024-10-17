@@ -1,6 +1,21 @@
-# AWS Lambda Example API
+# Mace Innovations - ICE Lamda SDK to API - Lamda Example API
 
-This project demonstrates how to create an ASP.NET Core Web API running on AWS Lambda, exposed through Amazon API Gateway.
+Jumpstart your SDK-to-API conversion with this C# .Net 8 AWS Lambda example API project. It creates an ASP.NET Core Web API running on AWS Lambda and exposed through Amazon API Gateway.
+
+## Key Features
+- Authentication: Supports both Lender and ISV authentication.
+- V3 Loan Field Reader/Writer: Enables efficient reading and writing of loan fields.
+- Exclusive Loan Locking: Ensures loan data integrity through exclusive locking.
+- Rate Limit Header: Rate limit information is included in the response object for monitoring.
+- Performance Metrics: Execution time metrics are provided in the response object to track performance.
+- Postman Collection: Included for easy debugging, testing, and development.
+
+
+
+
+
+
+
 
 ## Table of Contents
 
