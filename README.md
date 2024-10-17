@@ -1,4 +1,4 @@
-# Mace Innovations - ICE Lamda SDK to API - Lamda Example API
+# Mace Innovations - ICE Lamda SDK to API - AWS Lamda Example API
 
 Jumpstart your SDK-to-API conversion with this C# .Net 8 AWS Lambda example API project. It creates an ASP.NET Core Web API running on AWS Lambda and exposed through Amazon API Gateway.
 
