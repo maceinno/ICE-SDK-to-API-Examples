@@ -4,6 +4,10 @@
 
 Using a C# .NET 8 AWS Lambda example API project, we’ve developed a solution to jumpstart your ICE SDK-to-API conversion, leveraging the latest tools from Microsoft and C# .NET 8. This project sets up an ASP.NET Core Web API running on AWS Lambda, accessible via Amazon API Gateway. You can clone, fork, or adopt some of the core concepts to expedite your transition.
 
+## Watch the ICE SDK to API Webinar Demo
+
+[![ICE SDK to API Webinar Demo](https://img.youtube.com/vi/p4SVw3v6w4U/maxresdefault.jpg)](https://www.youtube.com/watch?v=p4SVw3v6w4U)
+
 While the codebase addresses important considerations, it was assembled in just two days. It’s intended to serve as a foundation to demonstrate how quickly you can start building your solution, especially if you're on the AWS platform where most of the necessary components are included.
 
 ## Key Features
